@@ -53,10 +53,10 @@ const App = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <Box border="1px solid green">
+      <Box>
         <Flex>
-          <Box border="1px solid red" width="40%">
-            <Flex gap="5px" border="1px solid red">
+          <Box width="40%">
+            <Flex gap="5px">
               
               <ItemInput
                 newItemContent={newItemContent}
@@ -66,7 +66,7 @@ const App = () => {
             </Flex>
           </Box>
 
-          <Box border="3px solid red" width="60%">
+          <Box width="60%">
             <DropArea
               items={items}
               updateItemPosition={updateItemPosition}

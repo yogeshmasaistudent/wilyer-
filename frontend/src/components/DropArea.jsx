@@ -20,11 +20,11 @@ const DropArea = ({ items, updateItemPosition, editItem, deleteItem }) => {
     <Box
       ref={drop}
       width="100%" 
-      height="635px"
+      height="700px"
       bg="gray.100"
-      position="absolut" 
      
     >
+   
       {items.map((item) => (
         <DraggableItem
           key={item._id}
