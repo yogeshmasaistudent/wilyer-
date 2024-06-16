@@ -1,4 +1,3 @@
-// src/components/DropArea.js
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { useDrop } from "react-dnd";
@@ -20,12 +19,11 @@ const DropArea = ({ items, updateItemPosition, editItem, deleteItem }) => {
   return (
     <Box
       ref={drop}
-      width="45%" // Adjusted width to display on the right side
+      width="100%" 
       height="635px"
       bg="gray.100"
-      // position="absolute" // Positioning the DropArea
-      right="0" // Aligning to the right side of the parent container
-      top="0" // Aligning to the top of the parent container
+      position="absolut" 
+     
     >
       {items.map((item) => (
         <DraggableItem

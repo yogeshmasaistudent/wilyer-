@@ -1,6 +1,5 @@
-// src/components/DataList.js
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Divider } from "@chakra-ui/react";
 import DraggableItem from "./DraggableItem";
 
 const DataList = ({ items }) => {
@@ -8,11 +7,12 @@ const DataList = ({ items }) => {
     <Box
       width="50%"
       height="500px"
-      // overflowY="auto"
-      // borderRight="1px solid #ccc"
-      border="1px solid red"
+      overflowY="auto"
+      borderRight="1px solid #ccc"
+      // marginTop="15px"
+      
     >
-      <h2>Data List</h2>
+     
       {items
         .filter((item) => item.position.x === 0 && item.position.y === 0)
         .map((item) => (

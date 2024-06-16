@@ -1,8 +1,6 @@
-// src/components/DraggableItem.js
 import React from "react";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Flex, Stack } from "@chakra-ui/react";
 import { useDrag } from "react-dnd";
-
 const ItemType = "ITEM";
 
 const DraggableItem = ({ item, onEdit, onDelete }) => {
@@ -12,24 +10,28 @@ const DraggableItem = ({ item, onEdit, onDelete }) => {
   }));
 
   return (
-    <Box
-      ref={drag}
-      position="absolute"
-      left={`${item.position.x}px`}
-      top={`${item.position.y}px`}
-      p={4}
-      bg="blue.300"
-      borderRadius="md"
-      border="1px solid red"
-    >
-      {item.content}
-      <Button onClick={() => onEdit(item._id)} ml={2}>
-        Edit
-      </Button>
-      <Button onClick={() => onDelete(item._id)} ml={2}>
-        Delete
-      </Button>
-    </Box>
+    <Stack m="5">
+      <Box>
+        <Box
+          ref={drag}
+          position="absolute"
+          left={`${item.position.x}px`}
+          top={`${item.position.y}px`}
+          p={4}
+          bg="blue.300"
+          borderRadius="md"
+    
+        >
+          {item.content}
+          <Button onClick={() => onEdit(item._id)} ml={2}>
+            Edit
+          </Button>
+          <Button onClick={() => onDelete(item._id)} ml={2}>
+            Delete
+          </Button>
+        </Box>
+      </Box>
+    </Stack>
   );
 };
 

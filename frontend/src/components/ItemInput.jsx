@@ -1,6 +1,5 @@
-// src/components/ItemInput.js
 import React from "react";
-import { Input, Button } from "@chakra-ui/react";
+import { Input, Button, Divider } from "@chakra-ui/react";
 
 const ItemInput = ({ newItemContent, setNewItemContent, addItem }) => {
   return (

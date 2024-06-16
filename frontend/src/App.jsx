@@ -1,6 +1,6 @@
 // src/App.js
 import React, { useState, useEffect } from "react";
-import { Box, Flex, Input, Button } from "@chakra-ui/react";
+import { Box, Flex, Input, Button, Divider } from "@chakra-ui/react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import axios from "axios";
@@ -53,22 +53,28 @@ const App = () => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <Box p={5} border="1px solid red">
-        <Flex mb={5}>
-          <ItemInput
-            newItemContent={newItemContent}
-            setNewItemContent={setNewItemContent}
-            addItem={addItem}
-          />
+      <Box border="1px solid green">
+        <Flex>
+          <Box border="1px solid red" width="40%">
+            <Flex gap="5px" border="1px solid red">
+              
+              <ItemInput
+                newItemContent={newItemContent}
+                setNewItemContent={setNewItemContent}
+                addItem={addItem}
+              />
+            </Flex>
+          </Box>
+
+          <Box border="3px solid red" width="60%">
+            <DropArea
+              items={items}
+              updateItemPosition={updateItemPosition}
+              editItem={editItem}
+              deleteItem={deleteItem}
+            />
+          </Box>
         </Flex>
-        <Box>
-          <DropArea
-            items={items}
-            updateItemPosition={updateItemPosition}
-            editItem={editItem}
-            deleteItem={deleteItem}
-          />
-        </Box>
       </Box>
     </DndProvider>
   );
