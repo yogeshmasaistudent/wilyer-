@@ -3,7 +3,7 @@ import { Input, Button, Box } from "@chakra-ui/react";
 
 const ItemInput = ({ newItemContent, setNewItemContent, addItem }) => {
   return (
-    <Box p="5px">
+    <Box p="5px" >
       <Input
         value={newItemContent}
         onChange={(e) => setNewItemContent(e.target.value)}

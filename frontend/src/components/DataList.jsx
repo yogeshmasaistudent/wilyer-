@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Divider } from "@chakra-ui/react";
+import { Box, Divider, VStack } from "@chakra-ui/react";
 import DraggableItem from "./DraggableItem";
 
 const DataList = ({ items }) => {
@@ -10,9 +10,7 @@ const DataList = ({ items }) => {
       overflowY="auto"
       borderRight="1px solid #ccc"
       // marginTop="15px"
-      
     >
-     
       {items
         .filter((item) => item.position.x === 0 && item.position.y === 0)
         .map((item) => (

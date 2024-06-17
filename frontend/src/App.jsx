@@ -25,7 +25,7 @@ const App = () => {
   const addItem = async () => {
     const response = await axios.post("http://localhost:5000/api/items", {
       content: newItemContent,
-      position: { x: 0, y: 0 },
+      position: { x: 100, y: 150 },
     });
     setItems([...items, response.data]);
     setNewItemContent("");
@@ -57,7 +57,6 @@ const App = () => {
         <Flex>
           <Box width="40%">
             <Flex gap="5px">
-              
               <ItemInput
                 newItemContent={newItemContent}
                 setNewItemContent={setNewItemContent}
