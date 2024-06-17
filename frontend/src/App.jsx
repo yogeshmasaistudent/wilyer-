@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import { Box, Flex, Input, Button, Divider } from "@chakra-ui/react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
@@ -18,12 +17,12 @@ const App = () => {
   }, []);
 
   const fetchItems = async () => {
-    const response = await axios.get("http://localhost:5000/api/items");
+    const response = await axios.get("https://wilyer.onrender.com/api/items");
     setItems(response.data);
   };
 
   const addItem = async () => {
-    const response = await axios.post("http://localhost:5000/api/items", {
+    const response = await axios.post("https://wilyer.onrender.com/api/items", {
       content: newItemContent,
       position: { x: 100, y: 150 },
     });
@@ -32,14 +31,16 @@ const App = () => {
   };
 
   const updateItemPosition = async (id, position) => {
-    await axios.put(`http://localhost:5000/api/items/${id}`, { position });
+    await axios.put(`https://wilyer.onrender.com/api/items/${id}`, {
+      position,
+    });
     fetchItems();
   };
 
   const editItem = async (id) => {
     const newContent = prompt("Enter new content:");
     if (newContent) {
-      await axios.put(`http://localhost:5000/api/items/${id}`, {
+      await axios.put(`https://wilyer.onrender.com/api/items/${id}`, {
         content: newContent,
       });
       fetchItems();
