@@ -3,7 +3,7 @@
 This project implements a drag-and-drop interface using the MERN stack. Users can drag items, drop them in a specified area, edit, and delete them. The data is stored in a MongoDB database, ensuring persistence across sessions.
 
 ## Live Demo
-Check out the live demo [here](#).
+Check out the live demo [here](https://wilyer.vercel.app/).
 
 ## Video Demonstration
 Watch the video demonstration [here](#).
@@ -31,3 +31,8 @@ Watch the video demonstration [here](#).
    ```bash
    git clone https://github.com/yourusername/drag-and-drop-project.git
    cd drag-and-drop-project
+2. 
+```bash
+   cd server
+   npm install
+
